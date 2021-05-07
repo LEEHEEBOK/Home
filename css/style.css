@@ -28,3 +28,58 @@ html,body{
     background-size: cover;
     background-position: center;
 }
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: url("../images/16.png");
+    /* absolute는 제일 위에 올라옴 */
+    position: absolute;
+    top:0;
+    /* z-index는 음수 */
+    z-index:10;
+}
+.contents{
+    position: absolute;
+    top:50%; /* 센터에 오게 하는 방법 탑 왼쪽 50프로씩 오고*/
+    left: 50%;
+    margin-left: -234px; /* 468px의 절반값으 빼줍니다.*/
+    margin-top: -109px; /* 218px의 절반값으 빼줍니다.*/
+    z-index:20;
+    text-align: center;
+    font-family: "Malgun Gothic", sans-serif;
+}
+.contents__name{
+    font-size: 64px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 25px;
+}
+.contents__job{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 50px;
+}
+.contents__list{
+    font-size: 0;
+}
+.contents__list >li{
+    display: inline-block;
+    width:52px;
+    /* 한 줄자리 텍스트 영역을 수직 중앙에 오게 하고 싶다면 부모영역의 
+    높이 값을 같게하라. line-height 값과 */
+    height: 52px;
+    line-height: 52px;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.contents__list >li:last-child{
+    margin-right: 0;
+}
+.contents__list >li>a{
+    /* inherit 부모가 가지고 있는 색깔을 상속하라는 의미 */
+    color: white;
+}
+
